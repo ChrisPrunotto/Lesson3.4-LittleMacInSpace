@@ -2,19 +2,63 @@
 //
 
 #include <iostream>
+#include <string>
 
-int main()
-{
-    std::cout << "Hello World!\n";
-}
+	int main() {
+		double earthWeight, weightMultiplier;
+		int planet;
+		std::string planetName;
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+		std::cout << "Let's get ready to rumble!\n\n What is your weight (on Earth)?: ";
+		std::cin >> earthWeight;
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+		std::cout << "What planet (number from the sun) are you going to fight on?: ";
+		std::cin >> planet;
+
+		switch (planet)
+		{
+		case 1:
+			planetName = "Mercury";
+			weightMultiplier = 0.37;
+			break;
+		case 2:
+			planetName = "Venus";
+			weightMultiplier = 0.90;
+			break;
+		case 3:
+			planetName = "Earth";
+			weightMultiplier = 1;
+			break;
+		case 4:
+			planetName = "Mars";
+			weightMultiplier = 0.37;
+			break;
+		case 5:
+			planetName = "Jupiter";
+			weightMultiplier = 2.52;
+			break;
+		case 6:
+			planetName = "Saturn";
+			weightMultiplier = 1.06;
+			break;
+		case 7:
+			planetName = "Uranus";
+			weightMultiplier = .88;
+			break;
+		case 8:
+			planetName = "Neptune";
+			weightMultiplier = 1.12;
+			break;
+		case 9:
+			planetName = "Pluto";
+			weightMultiplier = 0.67;
+			break;
+
+		default:
+			planetName = "Unknown";
+			weightMultiplier = 0;
+			break;
+		}
+
+		std::cout << "On " << planetName << ", Little Mac would weigh " << earthWeight * weightMultiplier << "." << std::endl;
+	}
